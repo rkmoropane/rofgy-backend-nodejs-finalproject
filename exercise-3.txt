@@ -1,0 +1,6 @@
+theia@theiadocker-rkmoropane:/home/project$ curl -X POST -H "Content-Type: application/json" -d '{
+  "username": "coopercoote",
+  "email": "ccoote@gmail.com",
+  "password": "cg123"
+}' -k http://localhost:3000/register
+{"message":"The user coopercoote has been added"}

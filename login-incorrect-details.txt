@@ -1,0 +1,4 @@
+theia@theiadocker-rkmoropane:/home/project$ curl  -X POS -d '{'Content-Type: application/json'  
+    "username":"coopercoote",
+    "password":"cg1234"}' -k 'http://localhost:3000/login'
+{"message":"Invalid credentials"}

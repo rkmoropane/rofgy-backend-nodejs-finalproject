@@ -1,0 +1,4 @@
+theia@theiadocker-rkmoropane:/home/project$ curl  -X POST  -H 'Content-Type: application/json'  -d '{ POST  -H 'Content-Type: application/json'  
+    "username":"coopercoote",
+    "password":"cg123"}' -k 'http://localhost:3000/login'
+{"message":"coopercoote has logged in"}
