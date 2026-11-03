@@ -21,10 +21,15 @@ const {
 
 mongoose.set('strictQuery', false);
 
-const uri =  `mongodb://${MONGODB_USER}:${MONGODB_PASSWORD}@${MONGODB_HOST}:${MONGODB_PORT}`;
+const connectDB = async () => {
+    const mongoURI =  `mongodb://${MONGODB_USER}:${MONGODB_PASSWORD}@${MONGODB_HOST}:${MONGODB_PORT}`;
+    
+    await mongoose.connect(mongoURI,{'dbName': `${MONGODB_DATABASE}`}, {serverSelectionTimeoutMS: 15000});
 
-mongoose.connect(uri,{'dbName': `${MONGODB_DATABASE}`});
+    console.log('Connected to MongoDB successfully!');
+};
 
+connectDB();
 const User = mongoose.model('User', { username: String, email: String, password: String });
 const Post = mongoose.model('Post', { userId: mongoose.Schema.Types.ObjectId, text: String });
 
