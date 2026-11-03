@@ -22,7 +22,7 @@ const {
 mongoose.set('strictQuery', false);
 
 const connectDB = async () => {
-    const mongoURI =  `mongodb://${MONGODB_USER}:${MONGODB_PASSWORD}@${MONGODB_HOST}:${MONGODB_PORT}`;
+    const mongoURI =  `mongodb://${MONGODB_USER}:${MONGODB_PORT}`;
     
     await mongoose.connect(mongoURI,{'dbName': `${MONGODB_DATABASE}`}, {serverSelectionTimeoutMS: 15000});
 
